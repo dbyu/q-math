@@ -1,0 +1,7 @@
+This is my repository for mathematical and statistical functions
+that I have written in q/kdb+. It is random and scattered at the
+moment, but at some point I will write a manual for how to use
+these effectively once this library has reached a critical mass 
+of perhaps 20 functions or so.
+
+dbyu 2012.05.10
