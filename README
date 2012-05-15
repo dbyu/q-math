@@ -2,12 +2,14 @@ This is my repository for mathematical and statistical functions
 that I have written in q/kdb+. It is random and scattered at the
 moment, but at some point I will write a manual for how to use
 these effectively once this library has reached a critical mass 
-of perhaps 20 functions or so.
+of perhaps 30 functions or so.
 
 highlights:
 LSF is a generalized least-squares fit function, compact form.
 LSF2 works to higher orders, but is about twice as slow.
 QR is a decomposition of a square matrix into eigenvectors.
+HH outputs tridiagonal form of a square matrix - would like to
+ make this a more concise at some point.
 gamma is the gamma function - 2nd argument is how many terms to
  use in spouge's approximation (much more concise than lanczos's
  approximation). for \P 7 in q/kdb+, 5 or 6 works, e.g.
