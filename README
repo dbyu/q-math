@@ -9,6 +9,8 @@ LSF is a generalized least-squares fit function, compact form.
 LSF2 works to higher orders, but is about twice as slow.
 QR is a decomposition of a square matrix into eigenvectors.
 gamma is the gamma function - 2nd argument is how many terms to
-  use in the approximation. for \P 7 in q/kdb+, 5 or 6 works.
+ use in spouge's approximation (much more concise than lanczos's
+ approximation). for \P 7 in q/kdb+, 5 or 6 works, e.g.
+ gamma[0.75;5] -> 1.2254167024 (Abramowitz & Stegun, chapter 6).
 
 dbyu 2012.05.10
