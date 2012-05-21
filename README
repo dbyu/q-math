@@ -7,17 +7,14 @@ routines in chapters 14/15 of Numerical Recipes in C.
 
 highlights:
 LSF is a generalized least-squares fit function, compact form.
-LSF2 works to higher orders, but is about twice as slow.
-LM is Levenberg-Marquardt nonlinear fitting algorithm - easily
- the most difficult routine to code out of the bunch so far.
-QR is a decomposition of a square matrix into eigenvectors, can
- also find eigenvalues (specify in 2nd argument).
-HH outputs tridiagonal form of a square matrix - would like to
- make this more concise at some point.
+LSF2 works to higher orders; about twice as slow, uses straight
+ gauss-jordan elimination.
+LM is levenberg-marquardt nonlinear fitting algorithm, requires
+ a multivariable function and its gradient.
 gamma is the gamma function - 2nd argument is how many terms to
  use in spouge's approximation (much more concise than lanczos's
  approximation). for \P 7 in q/kdb+, 5 or 6 works, e.g.
- gamma[0.75;5] returns 1.22417 (1.2254167024 in Abramowitz & 
+ gamma[0.75;5] returns 1.225417 (1.2254167024 in Abramowitz & 
  Stegun, chapter 6).
 
 dbyu 2012.05.10
