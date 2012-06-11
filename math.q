@@ -118,3 +118,8 @@ tutest:{[x;y] ((avg x)-avg y)%sqrt(((var x)%count x)+(var y)%count y)}
 tptest:{[x;y] ((avg x)-avg y)%sqrt(((var x)+(var y)-2*cov[x;y])%count x)}
 gamma:{[z;a]((z+a-1)xexp(z-0.5))*(exp(-1*a+z-1))*((sqrt(2*3.1415926535))+sum({[k;b]((-1)xexp(k-1))*((b-k)xexp(k-0.5))*(exp(b-k))%({(*) over 1+til x}[k-1])}[;a] each 1+til a-1) %' z+til a-1)}
 beta:{gamma[x;6]*gamma[y;6]%gamma[x+y;6]}
+
+/ added S.Plouffe's BBP base digit extraction algorithm for computing pi (1995).
+/ arg is # of terms to use, can be used to arbitrary precision. for \P 12, pi[8]
+/ is good enough:
+pi:{sum(1%16 xexp til x)*'{[k](4%(1+8*k))-(2%(4+8*k))+(1%(5+8*k))+(1%(6+8*k))}[til x]}
