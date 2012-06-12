@@ -122,4 +122,4 @@ beta:{gamma[x;6]*gamma[y;6]%gamma[x+y;6]}
 / added S.Plouffe's BBP base digit extraction algorithm for computing pi (1995).
 / arg is # of terms to use, can be used to arbitrary precision. for \P 12, pi[8]
 / is good enough:
-pi:{sum(1%16 xexp til x)*'{[k](4%(1+8*k))-(2%(4+8*k))+(1%(5+8*k))+(1%(6+8*k))}[til x]}
+pi:{sum (1%16 xexp til x)*'{(4%1+8*x)-(2%4+8*x)+(1%5+8*x)+(1%6+8*x)} til x}
